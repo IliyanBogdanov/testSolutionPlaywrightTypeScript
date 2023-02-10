@@ -92,7 +92,7 @@ export function AddEditMemberModal({ onSubmit, person, modalProps: { error, ...m
             <SelectField
               data-test-id="employment-input"
               name="employment"
-              label="Employment type"
+              label="Type of employment"
               helper="Full-time employee or contractor."
             >
               {Object.values(EMPLOYMENT_TYPES).map((employment, idx) => (
