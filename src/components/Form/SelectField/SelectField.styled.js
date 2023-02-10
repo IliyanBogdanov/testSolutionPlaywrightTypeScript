@@ -16,10 +16,16 @@ export const Select = styled.select`
   background-position-x: calc(100% - 12px);
   background-position-y: 50%;
   text-transform: capitalize;
-  &:hover,
+  color: var(--colors-bayoux);
+  &:hover {
+    outline: none;
+    border-bottom-color: var(--colors-lynch);
+  }
+
   &:focus {
     outline: none;
     border-bottom-color: var(--colors-irisBlue);
   }
+
   color: ${({ $hasValue }) => ($hasValue ? ' var(--colors-darkBlue)' : 'var(--colors-bayoux)')};
 `;

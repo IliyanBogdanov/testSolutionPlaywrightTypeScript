@@ -18,7 +18,7 @@ export function PeopleHeader(props) {
           </Text>
           {employeeCount !== null && (
             <PeopleHeaderCountStyled>
-              {employeeCount} {employeeCount > 1 ? 'employees' : 'employee'}
+              {employeeCount} {employeeCount > 1 ? 'members' : 'member'}
             </PeopleHeaderCountStyled>
           )}
         </PeopleHeaderPrimaryStyled>

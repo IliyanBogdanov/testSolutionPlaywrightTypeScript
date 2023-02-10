@@ -9,7 +9,7 @@ export function PeopleToolbar(props) {
       <div>
         <SearchField
           id="search-person"
-          placeholder="Search by name…"
+          placeholder="Search people..."
           value={nameFilter}
           setValue={setNameFilter}
         />
@@ -20,20 +20,20 @@ export function PeopleToolbar(props) {
             <Filter
               value={typeFilter}
               setValue={setTypeFilter}
-              option="employee"
-              data-testid="employee-filter"
+              option="contractor"
+              data-testid="contractor-filter"
             >
-              Employee
+              Contractor
             </Filter>
           </div>
           <div>
             <Filter
               value={typeFilter}
               setValue={setTypeFilter}
-              option="contractor"
-              data-testid="contractor-filter"
+              option="employee"
+              data-testid="employee-filter"
             >
-              Contractor
+              Employee
             </Filter>
           </div>
         </PeopleToolbarItemsStyled>

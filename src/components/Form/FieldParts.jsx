@@ -5,10 +5,6 @@ export const Field = styled.div`
 
   --labelColor: var(--colors-bayoux);
 
-  &:focus-within {
-    --labelColor: var(--colors-irisBlue);
-  }
-
   & + & {
     margin-top: 32px;
   }
@@ -16,7 +12,7 @@ export const Field = styled.div`
 
 export const Label = styled.span`
   display: block;
-  color: var(--labelColor);
+  color: ${({ $hasError }) => ($hasError ? `var(--colors-redPink)` : `var(--labelColor)`)};
   ${({ theme }) => theme.typography.bodyXs}
   opacity: ${({ $hasValue }) => ($hasValue ? 1 : 0)}
 `;
@@ -27,7 +23,7 @@ const Text = styled.span`
   margin-top: 4px;
 `;
 
-const ErrorMsg = styled.span`
+export const ErrorMsg = styled.span`
   color: var(--colors-redPink);
 `;
 
@@ -36,7 +32,7 @@ export const HintText = styled(Text)`
   ${({ theme }) => theme.typography.bodyXs}
 `;
 
-export function Hint({ errorMsg, helper }) {
+export function Hint({ errorMsg, helper, blah }) {
   return (
     <HintText>
       {errorMsg && <ErrorMsg>{errorMsg}</ErrorMsg>}

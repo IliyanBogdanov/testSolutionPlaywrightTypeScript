@@ -1,76 +1,49 @@
 import styled, { keyframes } from 'styled-components';
 
-const animateLeft = keyframes`
-  0% {
-    opacity: 1;
+const logoAnimation = keyframes`
+  0%, 25% {
+    stroke-dashoffset: 0;
   }
-
-  50% {
-    opacity: 0.4;
-  }
-
   100% {
-    opacity: 1;
+    stroke-dashoffset: 650px;
   }
 `;
 
-const animateRight = keyframes`
-  100% {
-    opacity: 0.4;
-  }
-
-  50% {
+const logoAnimationReducedAnimation = keyframes`
+  0%, 50% {
     opacity: 1;
   }
-
-  0% {
-    opacity: 0.4;
+  100% {
+    opacity: .3;
   }
 `;
 
-const LogoLeft = styled.path``;
-const LogoRight = styled.path``;
-
-const Wrapper = styled.div`
+const RemoteLoader = styled.div`
   width: 36px;
+  margin: 50px auto;
 
-  ${LogoLeft} {
-    animation: ${animateLeft} 1s infinite;
-    fill: var(--colors-irisBlue);
-  }
-
-  ${LogoRight} {
-    animation: ${animateRight} 1s infinite;
-    fill: var(--colors-irisBlue);
+  svg .logo {
+    animation: ${logoAnimationReducedAnimation} 1s infinite alternate;
+    stroke: #3639a4;
+    @media (prefers-reduced-motion: no-preference) {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 650px;
+      animation: ${logoAnimation} 1.2s infinite alternate;
+      animation-timing-function: ease-in;
+    }
   }
 `;
 
-const LoadingLogo = (props) => (
-  <Wrapper {...props} data-testid="loading-logo">
-    <svg
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      viewBox="0 0 119.9 148.4"
-      xmlSpace="preserve"
-    >
-      <defs />
-      <g>
-        <g>
-          <LogoLeft
-            d="M49.1,117.1C41.5,112.7,35.4,106.6,31,99c-4.4-7.6-6.7-15.9-6.7-24.8c0-9.1,2.2-17.4,6.7-25.1
-        c4.4-7.6,10.5-13.7,18.1-18.1c7.6-4.4,15.9-6.6,24.9-6.7V0C60.7,0,48.3,3.3,37,9.9C25.5,16.5,16.5,25.5,9.9,37
-        C3.3,48.4,0,60.8,0,74.2c0,13.4,3.3,25.8,9.9,37.1c6.6,11.3,15.6,20.3,27.1,27c11.4,6.7,23.7,10,37.1,10.1v-24.6
-        C65.1,123.7,56.8,121.5,49.1,117.1z"
-          />
-        </g>
-        <g>
-          <LogoRight d="M74.1,28.5V120c25.3,0,45.8-20.5,45.8-45.8S99.4,28.5,74.1,28.5z" />
-        </g>
-      </g>
+const RemoteLogoLoader = (props) => (
+  <RemoteLoader data-testid="loader" aria-label={props['aria-label'] || 'Loading'} {...props}>
+    <svg viewBox="0 0 231 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M38 268.5V192V107C44 45.5 115.159 20.2199 159 51.5C211 88.6012 192.5 148 169.5 169.5C161.598 176.887 145.5 186.5 131.5 190C131.5 247 166 272 230.5 272"
+        strokeWidth="76"
+        className="logo"
+      />
     </svg>
-  </Wrapper>
+  </RemoteLoader>
 );
 
-export default LoadingLogo;
+export default RemoteLogoLoader;

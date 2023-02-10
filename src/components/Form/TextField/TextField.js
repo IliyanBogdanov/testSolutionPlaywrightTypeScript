@@ -5,7 +5,9 @@ export default function TextField({ label, value, helper, errorMsg, ...props }) 
 
   return (
     <Field as="label">
-      <Label $hasValue={!!value}>{label}</Label>
+      <Label $hasError={!!errorMsg} $hasValue={!!value}>
+        {label}
+      </Label>
       <Input value={value} {...props} {...invalidAttr} />
       <Hint errorMsg={errorMsg} helper={helper} />
     </Field>

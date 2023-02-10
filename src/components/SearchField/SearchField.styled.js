@@ -19,14 +19,13 @@ export const SearchFieldIconStyled = styled.div`
 `;
 
 export const SearchFieldInputStyled = styled.input`
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 0 16px 0 48px;
-  height: 40px;
+  height: 34px;
   width: 200px;
 
   background: transparent;
-  border: 1px solid transparent;
-  box-shadow: 1px 2px 3px 0px transparent inset;
+  border: 1px solid var(--colors-lynch);
   color: var(--colors-darkBlue);
   &::placeholder {
     color: var(--colors-lynch);
@@ -37,13 +36,16 @@ export const SearchFieldInputStyled = styled.input`
 
   transition: box-shadow 0.1s, border-color 0.1s, background-color 0.1s;
 
+  &:hover {
+    cursor: pointer;
+  }
+
+  :not(:placeholder-shown),
   &:hover,
   &:focus {
-    background-color: #fdfeff;
-    border-color: #e7effc;
+    background: rgba(234, 240, 246, 0.45);
   }
   &:focus {
-    box-shadow: 1px 2px 3px 0px #c6d6ef inset;
     outline: none;
   }
 `;

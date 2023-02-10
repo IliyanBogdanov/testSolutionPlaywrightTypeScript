@@ -10,7 +10,11 @@ export const Input = styled.input`
   ${({ theme }) => theme.typography.bodyMedium}
   padding: 4px 0 8px;
 
-  &:hover,
+  &:hover {
+    outline: none;
+    border-bottom-color: var(--colors-lynch);
+  }
+
   &:focus {
     outline: none;
     border-bottom-color: var(--colors-irisBlue);

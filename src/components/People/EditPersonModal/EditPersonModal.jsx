@@ -47,7 +47,7 @@ export function AddEditMemberModal({ onSubmit, person, modalProps: { error, ...m
               name="name"
               placeholder="Name"
               label="Name"
-              helper="Their first and last name"
+              helper="Their first and last name."
             />
             <TextField
               id="jobTitle"
@@ -60,7 +60,7 @@ export function AddEditMemberModal({ onSubmit, person, modalProps: { error, ...m
               data-test-id="country-input"
               name="country"
               label="Country"
-              helper="Where are they based?"
+              helper="Where they live most of the time."
             >
               {COUNTRIES.map((country, idx) => (
                 <option data-testid="country-option" key={`country-${idx}`}>
@@ -86,14 +86,14 @@ export function AddEditMemberModal({ onSubmit, person, modalProps: { error, ...m
               name="salary"
               label="Salary"
               placeholder="Salary"
-              helper="Gross yearly salary"
+              helper="Their gross yearly salary."
               type="decimal"
             />
             <SelectField
               data-test-id="employment-input"
               name="employment"
               label="Employment type"
-              helper="Full-time employee or contractor"
+              helper="Full-time employee or contractor."
             >
               {Object.values(EMPLOYMENT_TYPES).map((employment, idx) => (
                 <option data-testid="employment-option" key={`employment-${idx}`}>

@@ -71,13 +71,13 @@ export const Modal = ({
                   Save
                 </Button>
                 <Button
-                  data-testid="modal-cancel-button"
+                  data-testid="modal-close-button"
                   type="button"
                   size="sm"
                   variant="secondary"
                   onClick={onCancel}
                 >
-                  Cancel
+                  Close
                 </Button>
               </div>
             </Footer>
