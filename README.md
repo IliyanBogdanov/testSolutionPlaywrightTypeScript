@@ -30,7 +30,7 @@ Please report issues on the repository's "Issues" feature with detailed informat
 
 Please provide your answers to the following questions by adding them directly to the [Exercise 1.1 candidate answers section](#candidate_answers).
 
-- Can you describe the different types of testing that can be used to ensure product quality, and explain when and why each type should be employed?
+- What different types of testing can be used to ensure product quality to this test application and explain when and why each type should be employed?
 
 - In your opinion, what areas of the product requirements would benefit from improvement and why?
 
@@ -54,7 +54,7 @@ Create a simple report for the automation test that you created and add it to th
 
 ## Prerequisites
 
-- Node >= 8.10
+- Node = 16
 - NPM >= 5.6
 - Git
 
