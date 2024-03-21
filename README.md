@@ -38,7 +38,65 @@ Please provide your answers to the following questions by adding them directly t
 
 #### Exercise 1.1 candidate answers
 
-`To be filled by the candidate`
+1. **Unit Testing**:
+    - **Purpose**: To test individual components (functions, methods) in isolation.
+    - **When**: Employed during development to catch logic errors early.
+    - **Why**: Ensures that each piece of code functions correctly on its own.
+
+2. **Integration Testing**:
+    - **Purpose**: To verify interactions between different parts of the application.
+    - **When**: After unit testing and when components are integrated.
+    - **Why**: Ensures that components work together seamlessly.
+
+3. **Functional Testing**:
+    - **Purpose**: Validates end-to-end functionality from a user's perspective.
+    - **When**: During the later stages of development.
+    - **Why**: Ensures that features (search, filter, create, edit) work as expected.
+
+4. **Regression Testing**:
+    - **Purpose**: Re-run tests after code changes to ensure existing functionality remains intact.
+    - **When**: After bug fixes or feature enhancements.
+    - **Why**: Prevents unintended side effects.
+
+5. **Usability Testing**:
+    - **Purpose**: Involves real users to assess usability.
+    - **When**: Before release or during user acceptance testing.
+    - **Why**: Identifies usability issues and gathers user feedback.
+
+6. **Performance Testing**:
+    - **Purpose**: Evaluates system performance under load.
+    - **When**: Before deployment to production.
+    - **Why**: Ensures responsiveness and scalability.
+
+7. **Security Testing**:
+    - **Purpose**: Checks for vulnerabilities and data protection.
+    - **When**: Throughout development and before release.
+    - **Why**: Protects against security breaches.
+
+8. **Compatibility Testing**:
+    - **Purpose**: Tests across different browsers, devices, and operating systems.
+    - **When**: Before release.
+    - **Why**: Ensures consistent behavior across platforms.
+
+**Areas for Improvement**:
+
+1. **Error Handling**:
+    - **Why**: Clear and informative error messages are crucial. Improve error handling to guide users effectively when they encounter issues.
+
+2. **UI/UX Consistency**:
+    - **Why**: Evaluate the user interface for consistency, responsiveness, and overall user-friendliness. Ensure a seamless experience.
+
+3. **Data Validation**:
+    - **Why**: Enhance validation rules during data entry. Prevent invalid or incomplete data from being saved.
+
+4. **Accessibility**:
+    - **Why**: Consider accessibility guidelines (e.g., WCAG) to make the application usable by all users, including those with disabilities.
+
+5. **Edge Cases**:
+    - **Why**: Test extreme scenarios (e.g., very long names, special characters) thoroughly. Ensure robustness.
+
+6. **Documentation**:
+    - **Why**: Comprehensive documentation helps future maintainers and testers understand the application.
 
 ### Exercise 2
 
