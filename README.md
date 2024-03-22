@@ -157,3 +157,11 @@ This script runs automatically after `npm install`.
 - `GET http://localhost:4002/people/{id}`: get the person with id `{id}`
 - `POST http://localhost:4002/people`: create a new person
 - `PATCH http://localhost:4002/people/{id}`: update the person with id `{id}`
+
+## Automation documentation - Playwright + TypeScript
+
+- the solution uses latest Playwright + TypeScript tech stack
+- `npx playwright test --headed` - runs all the tests from the root folder and automatically opens the report
+- `npx playwright show-report` - shows the report from the last execution
+- html report is being served in `http://localhost:9323`
+- tests are being executed in three instances with chromium, fîrefox and webkit browsers
