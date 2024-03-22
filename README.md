@@ -161,7 +161,7 @@ This script runs automatically after `npm install`.
 ## Automation documentation - Playwright + TypeScript
 
 - the solution uses latest Playwright + TypeScript tech stack
+- tests/solution-e2e-tests.spec.ts - is the place where the functional ui tests are located
 - `npx playwright test --headed` - runs all the tests from the root folder and automatically opens the report after completion
 - `npx playwright show-report` - shows the report from the last execution
 - tests are being executed in three instances with chromium, fîrefox and webkit browsers
-- [ui tests](tests/solution-e2e-tests.spec.ts)
