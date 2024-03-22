@@ -77,3 +77,9 @@
         - **Expected**: The UI should reflect the change when the link is clicked.
         - **Severity**: Major
         - **Priority**: Medium
+
+    - **User is able to create a duplicated record**:
+        - **Actual**: User is able to create a record with the same data multiple times.
+        - **Expected**: A validation message should appear when attempting to create a record with identical data.
+        - **Severity**: Medium
+        - **Priority**: Medium
